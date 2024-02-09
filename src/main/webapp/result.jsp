@@ -91,8 +91,8 @@
     
     
 
-        <p>あなたの選んだ手は<%= handStr  %>です。</p>
-        <p>相手の選んだ手は<%= cpuHandStr  %>です。</p>
+        <p>あなたの選んだ手は：<%= handStr  %>です。</p>
+        <p>相手の選んだ手は：<%= cpuHandStr  %>です。</p>
         <p>結果: <%= resultStr %></p>
         <P>今の勝敗は～</P>
        <p>あなた：<%= (Integer) request.getSession().getAttribute("playerScore") %>　CPU：<%= (Integer) request.getSession().getAttribute("cpuScore") %></p>
