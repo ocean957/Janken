@@ -6,7 +6,6 @@
     <title>じゃんけんゲーム</title>
 </head>
 <body>
-
     <h1>じゃんけんゲーム</h1>
     <form action="JankenServlet" method="GET">
         <label for="hand">あなたの手を選んでください：</label>
@@ -19,11 +18,5 @@
         <br>
         <input type="submit" value="じゃんけんする">
     </form>
-    
-    
-    
-    
-    
-    
 </body>
 </html>

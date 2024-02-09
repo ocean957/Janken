@@ -45,13 +45,15 @@ public class JankenServlet extends HttpServlet {
             cpuScore ++;
             request.getSession().setAttribute("cpuScore", cpuScore);
             System.out.println("CPUスコア：" + cpuScore);
+        } else if (result == 0) {
+        	System.out.println("引き分け、スコアの変動なし");
         }
        
         
        
        
-        // ゲーム回数が3回未満の場合
-        if (playerScore < 2 && cpuScore < 2) {
+        // どちらかのポイントが3点未満の場合繰り返す
+        if (playerScore < 3 && cpuScore < 3) {
             // プレイヤーの手と結果をリクエストにセット
             request.setAttribute("playerHand", playerHand);
             request.setAttribute("cpuHand", cpuHand);
@@ -62,8 +64,8 @@ public class JankenServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("result.jsp");
             dispatcher.forward(request, response);
 
-           
-        } else if(playerScore == 2 || cpuScore == 2){
+           //どちらかが3ポイント到達で最終結果を表示
+        } else if(playerScore == 3 || cpuScore == 3){
         	System.out.println("else if に到達");
 
             // スコアをセッションに保存
@@ -143,7 +145,7 @@ public class JankenServlet extends HttpServlet {
 
     private static int judge(int playerHand, int cpuHand) {
         if (playerHand == cpuHand) {
-            return 2;
+            return 0;
         } else if ((playerHand + 1) % 3 == cpuHand) {
             return 1;
         } else {

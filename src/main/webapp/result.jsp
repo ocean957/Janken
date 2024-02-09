@@ -7,12 +7,7 @@
 </head>
 <body>
     <h1>じゃんけん結果</h1>
-    
-    
-    
-    
 <%
-    
    Integer playerScore = (Integer) request.getSession().getAttribute("playerScore");
    Integer cpuScore = (Integer) request.getSession().getAttribute("cpuScore");
     
@@ -49,7 +44,7 @@
                 handStr = "未知の手";
         }
 
-        if (cpuHandObj != null) {
+        
             switch (cpuHandObj.intValue()) {
                 case 1:
                     cpuHandStr = "グー";
@@ -63,28 +58,20 @@
                 default:
                     cpuHandStr = "未知の手";
             }
-        } else {
-            cpuHandStr = "CPUの手が不明";
-        }
-
+       
         String resultStr = "";
         switch (result) {
         case 0:
             resultStr = "引き分けです！";
-        
             break;
         case 1:
             resultStr = "あなたの勝ちです！";
-       
             break;
         case 2:
             resultStr = "あなたの負けです！";
-        
             break;
     }
-
 %>
-
         <p>あなたの選んだ手は：<%= handStr  %>です。</p>
         <p>相手の選んだ手は：<%= cpuHandStr  %>です。</p>
         <p>結果: <%= resultStr %></p>

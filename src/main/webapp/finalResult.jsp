@@ -7,9 +7,6 @@
 </head>
 <body>
     <h1>じゃんけん最終結果</h1>
-
-   
-    
     <p>あなたの最後の手: <%= session.getAttribute("playerHand") %></p>
     <p>CPUの最後の手: <%= session.getAttribute("cpuHand") %></p>
     <p>最後の勝負の結果は～：<%= session.getAttribute("result") %></p>
