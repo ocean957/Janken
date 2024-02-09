@@ -11,7 +11,7 @@
     
     
     
-    <%
+<%
     
    Integer playerScore = (Integer) request.getSession().getAttribute("playerScore");
    Integer cpuScore = (Integer) request.getSession().getAttribute("cpuScore");
@@ -83,13 +83,7 @@
             break;
     }
 
-        %>
-    
-    
-  
-    
-    
-    
+%>
 
         <p>あなたの選んだ手は：<%= handStr  %>です。</p>
         <p>相手の選んだ手は：<%= cpuHandStr  %>です。</p>
@@ -97,11 +91,7 @@
         <P>今の勝敗は～</P>
        <p>あなた：<%= (Integer) request.getSession().getAttribute("playerScore") %>　CPU：<%= (Integer) request.getSession().getAttribute("cpuScore") %></p>
 
-        
-        
-
         <%-- 勝負が決まっていない場合は再度じゃんけんをする --%>
-        
         <form action="JankenServlet" method="GET">
             <label for="hand">あなたの手を選んでください：</label>
             <select name="hand" id="hand">
@@ -110,12 +100,10 @@
                 <option value="3">パー</option>
             </select>
             <br>
+            <br>
             <input type="submit" value="じゃんけんする">
         </form>
          <% System.out.println("じゃんけんに到達"); %>
-        
-        
-        
    
 </body>
 </html>

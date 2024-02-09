@@ -10,9 +10,10 @@
     
     <%
     session.setAttribute("playerScore", 0); // 初期化
-    session.setAttribute("cpuScore", 0); 
+    session.setAttribute("cpuScore", 0); // 初期化
     %>
     
+    <br>
     
     <form action="enter.jsp" method="GET">
         <input type="submit" value="じゃんけんをはじめる">

@@ -7,16 +7,6 @@
 </head>
 <body>
 
-<%
-    
-    
-    session.setAttribute("playerScore", 0); // 初期化
-    session.setAttribute("cpuScore", 0); 
-    
-   
-    
-    %>
-
     <h1>じゃんけんゲーム</h1>
     <form action="JankenServlet" method="GET">
         <label for="hand">あなたの手を選んでください：</label>
@@ -25,6 +15,7 @@
             <option value="2">チョキ</option>
             <option value="3">パー</option>
         </select>
+        <br>
         <br>
         <input type="submit" value="じゃんけんする">
     </form>
