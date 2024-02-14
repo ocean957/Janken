@@ -10,6 +10,7 @@
     <%
     session.setAttribute("playerScore", 0); // 初期化
     session.setAttribute("cpuScore", 0); // 初期化
+    session.setAttribute("gameCount", 0);
     %>
     <br>
     

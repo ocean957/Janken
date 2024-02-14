@@ -16,7 +16,7 @@
     
     <p>プレイヤーの最終スコア: <%= session.getAttribute("playerScore") %></p>
     <p>CPUの最終スコア: <%=  session.getAttribute("cpuScore") %></p>
-    <p>最終勝者: <%= request.getAttribute("winner") %></p>
+    <p>最終勝者: <%= session.getAttribute("winner") %></p>
     <br>
     <form action="index.jsp" method="GET">
         <input type="submit" value="もう一度じゃんけんする？">
