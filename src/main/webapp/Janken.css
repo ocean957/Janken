@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.メイン {
+  font-size: 2rem;
+  color: blue;
+}
+
+.center_parent {
+    padding: 20px;              /* 余白指定 */
+    background-color:  #ddd;    /* 背景色指定 */
+         /* テーブルセルにする */
+    
+    height: 100vh;
+  width: 100vw;
+    display: flex;
+ 	justify-content: center;
+ 	position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.center_item {
+    width: 150px;               /* 幅指定 */
+    height: 120px;              /* 高さ指定 */
+    text-align: center;
+    white-space: nowrap;
+}
+
+h1{
+	transform: translateX(-40%);
+}
+
+.result_h1{
+	transform: translateX(10%);
+}
+
+
+
+.center_p {
+	transform: translateX(-25%);
+}
+
+.center_footer {
+	transform: translateX(-75%);
+}
+
+.center_final_p {
+	transform: translateX(-50%);
+}
+
+.result_p {
+	transform: translateX(-20%);
+}
+
+.result_kekka_p {
+	transform: translateX(-5%);
+}
+
+.label {
+	transform: translateX(-37.5%);
+}
+
+
+
+
+

@@ -3,10 +3,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>じゃんけん結果</title>
+    <link rel="stylesheet" type="text/css" href="Janken.css">
+    <title>じゃんけん5番勝負</title>
 </head>
 <body>
-    <h1>じゃんけん結果</h1>
+<div class="center_parent">
+	<div class="center_item">
+    <div class="result_h1"><h1>じゃんけん結果</h1></div>
 <%
    Integer playerScore = (Integer) request.getSession().getAttribute("playerScore");
    Integer cpuScore = (Integer) request.getSession().getAttribute("cpuScore");
@@ -72,15 +75,15 @@
             break;
     }
 %>
-        <p>あなたの選んだ手は：<%= handStr  %>です。</p>
-        <p>相手の選んだ手は：<%= cpuHandStr  %>です。</p>
-        <p>結果: <%= resultStr %></p>
+		<div class="result_p"><p>現在：<%= request.getSession().getAttribute("gameCount") %> 試合目でございます！</p></div>
+        <div class="result_p"><p>あなたの選んだ手は：<%= handStr  %>です。</p></div>
+        <div class="result_p"><p>相手の選んだ手は：<%= cpuHandStr  %>です。</p></div>
+        <div class="result_kekka_p"><p>結果: <%= resultStr %></p></div>
         <P>今の勝敗は～</P>
        <p>あなた：<%= (Integer) request.getSession().getAttribute("playerScore") %>　CPU：<%= (Integer) request.getSession().getAttribute("cpuScore") %></p>
-
         <%-- 勝負が決まっていない場合は再度じゃんけんをする --%>
         <form action="JankenServlet" method="GET">
-            <label for="hand">あなたの手を選んでください：</label>
+           <div class="label"><label for="hand">↓↓あなたの手を選んでください↓↓</label></div>
             <select name="hand" id="hand">
                 <option value="1">グー</option>
                 <option value="2">チョキ</option>
@@ -91,6 +94,11 @@
             <input type="submit" value="じゃんけんする">
         </form>
          <% System.out.println("じゃんけんに到達"); %>
+         <br>
+         <br>
+   <div class="center_footer"><jsp:include page="footer.jsp"/></div>
+   </div>
+   </div>
    
 </body>
 </html>

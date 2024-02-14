@@ -3,21 +3,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>じゃんけんゲーム</title>
+    <link rel="stylesheet" type="text/css" href="Janken.css">
+    <title>じゃんけん5番勝負</title>
 </head>
+
 <body>
-    <h1>じゃんけんゲーム</h1>
+<div class="center_parent">
+	<div class="center_item">
+    <h1>じゃんけん5番勝負</h1>
     <%
     session.setAttribute("playerScore", 0); // 初期化
     session.setAttribute("cpuScore", 0); // 初期化
     session.setAttribute("gameCount", 0);
     %>
     <br>
-    
+    <div class="center_p"><p>5回勝負、3ポイント先取だよ！</p></div>
     <form action="enter.jsp" method="GET">
         <input type="submit" value="じゃんけんをはじめる">
     </form>
-
-    
+    <br>
+    <br>
+    <div class="center_footer"><jsp:include page="footer.jsp"/></div>
+    </div>
+    </div>
 </body>
 </html>
