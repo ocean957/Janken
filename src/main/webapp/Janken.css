@@ -1,14 +1,9 @@
 @charset "UTF-8";
-.メイン {
-  font-size: 2rem;
-  color: blue;
-}
+
 
 .center_parent {
     padding: 20px;              /* 余白指定 */
     background-color:  #ddd;    /* 背景色指定 */
-         /* テーブルセルにする */
-    
     height: 100vh;
   width: 100vw;
     display: flex;
@@ -27,6 +22,8 @@
     white-space: nowrap;
 }
 
+
+
 h1{
 	transform: translateX(-40%);
 }
@@ -42,7 +39,11 @@ h1{
 }
 
 .center_footer {
-	transform: translateX(-75%);
+	font-size: 0.5em;
+	transform: translateX(-40%);
+	background-color:  #ddd;
+	margin: 0;
+	padding: 0;
 }
 
 .center_final_p {
@@ -57,10 +58,28 @@ h1{
 	transform: translateX(-5%);
 }
 
+.janken_buttom{
+	margin: 1.4rem;
+}
+
+
+
 .label {
 	transform: translateX(-37.5%);
 }
 
+
+
+.gu-img {
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+}
+
+.radio{
+	padding-top: 1.2rem;
+	transform: translateX(-40%);
+}
 
 
 

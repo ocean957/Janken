@@ -9,9 +9,15 @@
 <body>
 <div class="center_parent">
 	<div class="center_item">
+	
+	
+	
+	
+	
     <h1>じゃんけん最終結果</h1>
-    <p>あなたの最後の手: <%= session.getAttribute("playerHand") %></p>
-    <p>CPUの最後の手: <%= session.getAttribute("cpuHand") %></p>
+   
+   <div class="result_p"><p>あなたの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("playerHand") %>.png" alt="p" width="30%" height="30%"></div>
+   <div class="result_p"><p>CPUの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("cpuHand") %>.png" alt="p" width="30%" height="30%"></div> 
     <div class="center_final_p"><p>最後の勝負の結果は～：<%= session.getAttribute("result") %></p></div>
     <br>
 	<!-- ゲームカウントを表示する -->

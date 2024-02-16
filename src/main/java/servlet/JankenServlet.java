@@ -24,7 +24,7 @@ public class JankenServlet extends HttpServlet {
     	HttpSession session = request.getSession(true);
     	
     	// プレイヤーの手を生成
-    	String playerHandStr = request.getParameter("hand");
+    	String playerHandStr = request.getParameter("te");
         int playerHand = Integer.parseInt(playerHandStr);
         
         // CPUの手をランダム生成
@@ -84,7 +84,7 @@ public class JankenServlet extends HttpServlet {
                    request.getSession().setAttribute("result", results);
                    
                    // プレイヤーの手を取得
-                   String playerHandStrs = "";
+                   String playerHandStrs = request.getParameter("te");
                    switch (playerHand) {
                        case 1:
                            playerHandStrs = "グー";
@@ -183,34 +183,34 @@ public class JankenServlet extends HttpServlet {
 	            String playerHandStrs = "";
 	            switch (playerHand) {
 	                case 1:
-	                    playerHandStrs = "グー";
+	                    playerHandStrs = "gu";
 	                    break;
 	                case 2:
-	                    playerHandStrs = "チョキ";
+	                    playerHandStrs = "choki";
 	                    break;
 	                case 3:
-	                    playerHandStrs = "パー";
+	                    playerHandStrs = "pa";
 	                    break;
 	                default:
-	                    playerHandStrs = "未知の手";
+	                    playerHandStrs = "なし";
 	            }
 	            // プレイヤーの手をセッションスコープに保存
 	            request.getSession().setAttribute("playerHand", playerHandStrs);
 	
 	            // CPUの手を取得
-	            String cpuHandStr = "";
+	           String cpuHandStr = "";
 	            switch (cpuHand) {
 	                case 1:
-	                    cpuHandStr = "グー";
+	                    cpuHandStr = "gu";
 	                    break;
 	                case 2:
-	                    cpuHandStr = "チョキ";
+	                    cpuHandStr = "choki";
 	                    break;
 	                case 3:
-	                    cpuHandStr = "パー";
+	                    cpuHandStr = "pa";
 	                    break;
 	                default:
-	                    cpuHandStr = "未知の手";
+	                    cpuHandStr = "なし";
 	            }
 	            // cpuの手をセッションスコープに保存
 	            request.getSession().setAttribute("cpuHand", cpuHandStr);
@@ -278,5 +278,4 @@ public class JankenServlet extends HttpServlet {
             return (gameCount != null) ? gameCount : 0; //初期値ではnullなので0が入るようにする
         }
     }
-    
 }
