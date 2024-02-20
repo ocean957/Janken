@@ -16,21 +16,30 @@
 	
     <h1>じゃんけん最終結果</h1>
    
-   <div class="result_p"><p>あなたの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("playerHand") %>.png" alt="p" width="30%" height="30%"></div>
-   <div class="result_p"><p>CPUの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("cpuHand") %>.png" alt="p" width="30%" height="30%"></div> 
-    <div class="center_final_p"><p>最後の勝負の結果は～：<%= session.getAttribute("result") %></p></div>
+   <div class="result_p"><p>あなたの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("playerHand") %>.png" alt="p" class="hand" width="25%" height="25%"></div>
+   <br>
+   <div class="result_p"><p>CPUの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("cpuHand") %>.png" alt="p" class="hand" width="25%" height="25%"></div> 
     <br>
+    <br>
+    <div class="center_final_p"><p>最後の勝負の結果は～：<%= session.getAttribute("result") %></p></div>
 	<!-- ゲームカウントを表示する -->
+	<br>
+	<br>
 	<p>合計で <%= session.getAttribute("gameCount") %> 試合しました！</p>
+    <br>
     <p>プレイヤーの最終スコア: <%= session.getAttribute("playerScore") %></p>
     <p>CPUの最終スコア: <%=  session.getAttribute("cpuScore") %></p>
+    <br>
+    <br>
     <p>最終勝者: <%= session.getAttribute("winner") %></p>
+    <br>
+    <br>
     <br>
     <form action="index.jsp" method="GET">
         <input type="submit" value="もう一度じゃんけんする？">
     </form>
     <br>
-    <div class="center_footer"><jsp:include page="footer.jsp"/></div>
+    <jsp:include page="footer.jsp"/>
     </div>
     </div>
 </body>

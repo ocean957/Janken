@@ -1,10 +1,53 @@
 @charset "UTF-8";
 
 
+/* ********************************************
+// --- リセット ---
+// ※ブラウザのデフォルトCSSをリセット
+// ***************************************** */
+  
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 16px;
+}
+body {
+  font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+header, footer, nav, menu, article, aside, section, details, figcaption, figure{
+  display: block;
+}
+ul, ol {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+img {
+  vertical-align: bottom;
+}
+a img {
+  border: none;
+}
+strong {
+  font-weight: normal;
+}
+i{
+  font-style: normal;
+}
+
+/* ********************************************
+// --- リセットここまで ---
+// ***************************************** */
+
+
 .center_parent {
     padding: 20px;              /* 余白指定 */
     background-color:  #ddd;    /* 背景色指定 */
-    height: 100vh;
+    height: 120vh;
   width: 100vw;
     display: flex;
  	justify-content: center;
@@ -17,9 +60,16 @@
 
 .center_item {
     width: 150px;               /* 幅指定 */
-    height: 120px;              /* 高さ指定 */
+    height: 200px;              /* 高さ指定 */
     text-align: center;
     white-space: nowrap;
+}
+
+.footer{
+	background-color:  #ddd;
+	font-size: 0.5em;
+	transform: translate(-1.6rem , 8rem);
+	
 }
 
 
@@ -33,25 +83,31 @@ h1{
 }
 
 
-
 .center_p {
-	transform: translateX(-25%);
+	transform: translateX(-1.4rem);
 }
 
-.center_footer {
-	font-size: 0.5em;
-	transform: translateX(-40%);
-	background-color:  #ddd;
-	margin: 0;
-	padding: 0;
+
+.center_buttom {
+	transform: translateX(-2.6rem);
 }
+
+
+.index_buttom{
+	margin: 1.6rem;
+	transform: translateX(-0.6rem);
+}
+
+
+
 
 .center_final_p {
 	transform: translateX(-50%);
 }
 
 .result_p {
-	transform: translateX(-20%);
+	margin: 0.2rem;
+	transform: translateX(-2.6rem);
 }
 
 .result_kekka_p {
@@ -59,28 +115,53 @@ h1{
 }
 
 .janken_buttom{
-	margin: 1.4rem;
+	transform: translateY(4.0rem);
 }
 
 
 
 .label {
-	transform: translateX(-37.5%);
+	transform: translateX(-3.8rem);
 }
 
 
 
-.gu-img {
-	width: 60px;
-	height: 60px;
-	vertical-align: middle;
-}
+
 
 .radio{
 	padding-top: 1.2rem;
-	transform: translateX(-40%);
+	transform: translateX(5rem);
+}
+
+.radio_enter{
+	transform: translateX(-2.0rem);
 }
 
 
+
+.hand{
+	transform: translateY(0.4rem);
+}
+
+.radio_position{
+	margin: 0.8rem;
+	transform: translateY(2.6rem);
+  vertical-align: -3.2rem;
+}
+
+.radio_position_result{
+  margin: 0.8rem;
+  transform: translate(-7.0rem , 2.4rem);
+}
+
+.img_enter{
+	transform: translateX(-3.2rem);
+	
+}
+
+.img_result{
+	transform: translateX(-10.0rem);
+	padding: 0.2rem;	
+}
 
 

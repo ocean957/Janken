@@ -18,12 +18,16 @@
     %>
     <br>
     <div class="center_p"><p>5回勝負、3ポイント先取だよ！</p></div>
-    <form action="enter.jsp" method="GET">
+    <br>
+    <br>
+    <div class="center_buttom"><p>↓↓ボタンを押してはじめてね↓↓</p></div>
+    <div class="index_buttom"><form action="enter.jsp" method="GET">
         <input type="submit" value="じゃんけんをはじめる">
     </form>
+    </div>
     <br>
     <br>
-    <div class="center_footer"><jsp:include page="footer.jsp"/></div>
+    <jsp:include page="footer.jsp"/>
     </div>
     </div>
 </body>

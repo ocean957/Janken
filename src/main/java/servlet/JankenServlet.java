@@ -87,13 +87,13 @@ public class JankenServlet extends HttpServlet {
                    String playerHandStrs = request.getParameter("te");
                    switch (playerHand) {
                        case 1:
-                           playerHandStrs = "グー";
+                           playerHandStrs = "gu";
                            break;
                        case 2:
-                           playerHandStrs = "チョキ";
+                           playerHandStrs = "choki";
                            break;
                        case 3:
-                           playerHandStrs = "パー";
+                           playerHandStrs = "pa";
                            break;
                        default:
                            playerHandStrs = "未知の手";
@@ -107,13 +107,13 @@ public class JankenServlet extends HttpServlet {
                    String cpuHandStr = "";
                    switch (cpuHand) {
                        case 1:
-                           cpuHandStr = "グー";
+                           cpuHandStr = "gu";
                            break;
                        case 2:
-                           cpuHandStr = "チョキ";
+                           cpuHandStr = "choki";
                            break;
                        case 3:
-                           cpuHandStr = "パー";
+                           cpuHandStr = "pa";
                            break;
                        default:
                            cpuHandStr = "未知の手";
@@ -140,7 +140,6 @@ public class JankenServlet extends HttpServlet {
                    // 試合数をカウントしてコンソールに表示
                    System.out.println("試合カウント：" + gameCount);
                    
-
                    // finalResult.jspにフォワード
                    request.getRequestDispatcher("finalResult.jsp").forward(request, response);
                    return; // java.lang.IllegalStateExceptionを回避するためのreturn文

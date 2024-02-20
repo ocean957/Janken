@@ -75,30 +75,40 @@
             break;
     }
 %>
+		<br>
 		<div class="result_p"><p>現在：<%= request.getSession().getAttribute("gameCount") %> 試合目でございます！</p></div>
-		<div class="result_p"><p>あなたの選んだ手は：　<img src="/janken/janken_<%= handStr %>.png" alt="<%= handStr %>" width="30%" height="30%"></div>
-        <div class="result_p"><p>相手の選んだ手は：　<img src="/janken/janken_<%= cpuHandStr %>.png" alt="<%= cpuHandStr %>" width="30%" height="30%"></p></div>
+		<br>
+		<div class="result_p"><p>あなたの選んだ手は：　<img src="/janken/janken_<%= handStr %>.png" alt="<%= handStr %>" class="hand" width="40px" height="40px"></div>
+        <br>
+        <div class="result_p"><p>相手の選んだ手は：　<img src="/janken/janken_<%= cpuHandStr %>.png" alt="<%= cpuHandStr %>" class="hand" width="40px" height="40px"></p></div>
+        <br>
+        <br>
         <div class="result_kekka_p"><p>結果: <%= resultStr %></p></div>
-        <P>今の勝敗は～</P>
+        <br>
+        <br>
+        <P>～今の勝敗は～</P>
        <p>あなた：<%= (Integer) request.getSession().getAttribute("playerScore") %>　CPU：<%= (Integer) request.getSession().getAttribute("cpuScore") %></p>
-        <%-- 勝負が決まっていない場合は再度じゃんけんをする --%>
+       <br>
+       <br>
+       <%-- 勝負が決まっていない場合は再度じゃんけんをする --%>
        <div class="label"><label for="hand">↓↓あなたの手を選んでください↓↓</label></div>
     
     <form action="JankenServlet" method="GET">
     <div class="radio">
-                <input type="radio" name="te" value="1" id="janken_gu" checked>
-                <img src="/janken/janken_gu.png" alt="gu" class="gu-img">
-                <input type="radio" name="te" value="2" id="janken_choki">
-                <img src="/janken/janken_choki.png" alt="choki" class="gu-img">
-                <input type="radio" name="te" value="3" id="janken_pa">
-                <img src="/janken/janken_pa.png" alt="pa" class="gu-img">
+                <input type="radio" class="radio_position_result" name="te" value="1" checked>
+                <img src="/janken/janken_gu.png" alt="gu" class="img_result" width="45px" height="45px">
+                <input type="radio" class="radio_position_result" name="te" value="2">
+                <img src="/janken/janken_choki.png" alt="choki" class="img_result" width="45px" height="45px">
+                <input type="radio" class="radio_position_result" name="te" value="3">
+                <img src="/janken/janken_pa.png" alt="pa" class="img_result" width="45px" height="45px">
+           
             </div>
            <div class="janken_buttom"><input type="submit" value="じゃんけんする"></div>
         </form>
           
          <% System.out.println("じゃんけんに到達"); %>
          
-   <div class="center_footer"><jsp:include page="footer.jsp"/></div>
+   <jsp:include page="footer.jsp"/>
    
 
    </div>
