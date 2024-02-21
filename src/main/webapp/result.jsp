@@ -80,7 +80,7 @@
 		<br>
 		<div class="result_p"><p>あなたの選んだ手は：　<img src="/janken/janken_<%= handStr %>.png" alt="<%= handStr %>" class="hand" width="40px" height="40px"></div>
         <br>
-        <div class="result_p"><p>相手の選んだ手は：　<img src="/janken/janken_<%= cpuHandStr %>.png" alt="<%= cpuHandStr %>" class="hand" width="40px" height="40px"></p></div>
+        <div class="result_p"><p>ＣＰＵの選んだ手は：　<img src="/janken/janken_<%= cpuHandStr %>.png" alt="<%= cpuHandStr %>" class="hand" width="40px" height="40px"></p></div>
         <br>
         <br>
         <div class="result_kekka_p"><p>結果: <%= resultStr %></p></div>

@@ -7,7 +7,7 @@
     <title>じゃんけん5番勝負</title>
 </head>
 <body>
-<div class="center_parent">
+<div class="center_parent_child">
 	<div class="center_item">
     <h1>じゃんけん5番勝負</h1>
     <br>
