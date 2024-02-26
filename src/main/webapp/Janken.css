@@ -44,9 +44,8 @@ i{
 // ***************************************** */
 
 
-
 .center_parent {
-	padding-top: 11.0rem;              
+	padding-top: 9.0rem;              
 	background-color:  #DD8C5D;    
 	height: 140vh;
 	width: 98.5vw;
@@ -61,13 +60,12 @@ i{
 	background-repeat: no-repeat;
 	background-position:center;
 	background-size: 98%;
-	 text-align: center;
+	text-align: center;
     white-space: nowrap;
 }
 
-
 .center_parent_child {
-	padding-top: 11.0rem;              
+	padding-top: 10.0rem;              
 	background-color:  #DD8C5D;    
 	height: 100vh;
 	width: 100vw;
@@ -86,8 +84,6 @@ i{
     white-space: nowrap;
 }
 
-
-
 .center_item {
     width: 150px;               
     height: 200px;             
@@ -96,11 +92,9 @@ i{
 .footer{
 	background-color:  #DD8C5D;
 	font-size: 0.5em;
-	transform: translate(-1.6rem ,4.6rem);
+	transform: translate(-1.6rem ,4.0rem);
 	
 }
-
-
 
 h1{
 	transform: translateX(-3.6rem);
@@ -110,24 +104,18 @@ h1{
 	transform: translateX(1rem);
 }
 
-
 .center_p {
 	transform: translateX(-1.4rem);
 }
 
-
-.center_buttom {
+.center_button {
 	transform: translateX(-2.6rem);
 }
 
-
-.index_buttom{
+.index_button{
 	margin: 1.6rem;
-	transform: translateX(-0.6rem);
+	transform: translateX(-1.0rem);
 }
-
-
-
 
 .center_final_p {
 	transform: translateX(-4.6rem);
@@ -142,19 +130,13 @@ h1{
 	transform: translateX(-0.8rem);
 }
 
-.janken_buttom{
-	transform: translateY(3.6rem);
+.janken_button_index{
+	transform: translate(-2.0rem , 1.8rem);
 }
-
-
 
 .label {
 	transform: translateX(-3.8rem);
 }
-
-
-
-
 
 .radio{
 	padding-top: 1.2rem;
@@ -164,8 +146,6 @@ h1{
 .radio_enter{
 	transform: translateX(-2.0rem);
 }
-
-
 
 .hand{
 	transform: translateY(0.4rem);
@@ -192,4 +172,21 @@ h1{
 	padding: 0.2rem;	
 }
 
-
+.button {
+    border-radius: 1.4rem;
+    width: 10.8rem;
+    height: 2.2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.8s;
+    font-weight: 600;
+    background: linear-gradient(270deg,rgba(251, 213, 251, 1), rgba(149, 233, 243, 1) 100%);
+    transform: translate(-0.5rem,3rem);
+}
+.button:hover {
+	cursor: pointer;
+    background: linear-gradient(270deg,rgba(229, 162, 255, 1), rgba(152, 233, 157, 1) 100%);
+    transition: 1.5s;
+}

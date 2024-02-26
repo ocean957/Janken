@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="Janken.css">
     <title>じゃんけん5番勝負</title>
 </head>
-
 <body>
 <div class="center_parent_child">
 	<div class="center_item">
@@ -20,12 +19,11 @@
     <div class="center_p"><p>5回勝負、3ポイント先取だよ！</p></div>
     <br>
     <br>
-    <div class="center_buttom"><p>↓↓ボタンを押してはじめてね↓↓</p></div>
-    <div class="index_buttom"><form action="enter.jsp" method="GET">
-        <input type="submit" value="じゃんけんをはじめる">
+    <div class="center_button"><p>↓↓ボタンを押してはじめてね↓↓</p></div>
+    <div class="index_button"><form action="enter.jsp" method="GET">
+        <div class=".janken_button_index"><input class="button" type="submit" value="じゃんけんをはじめる"></div>
     </form>
     </div>
-    <br>
     <br>
     <jsp:include page="footer.jsp"/>
     </div>

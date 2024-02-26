@@ -9,12 +9,11 @@
 <body>
 <div class="center_parent">
 	<div class="center_item">
+	<br>
     <h1>じゃんけん最終結果</h1>
-   
-   <div class="result_p"><p>あなたの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("playerHand") %>.png" alt="p" class="hand" width="25%" height="25%"></div>
-   <br>
-   <div class="result_p"><p>ＣＰＵの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("cpuHand") %>.png" alt="p" class="hand" width="25%" height="25%"></div> 
+    <div class="result_p"><p>あなたの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("playerHand") %>.png" alt="p" class="hand" width="25%" height="25%"></div>
     <br>
+    <div class="result_p"><p>ＣＰＵの最後の手は：　<img src="/janken/janken_<%= session.getAttribute("cpuHand") %>.png" alt="p" class="hand" width="25%" height="25%"></div> 
     <br>
     <div class="center_final_p"><p>最後の勝負の結果は：<%= session.getAttribute("result") %></p></div>
 	<!-- ゲームカウントを表示する -->
@@ -28,10 +27,8 @@
     <br>
     <p>最終勝者: <%= session.getAttribute("winner") %></p>
     <br>
-    <br>
-    <br>
     <form action="index.jsp" method="GET">
-        <input type="submit" value="もう一度じゃんけんする？">
+        <div class="janken_buttom"><input class="button" type="submit" value="もう一度じゃんけんする？"></div>
     </form>
     <br>
     <jsp:include page="footer.jsp"/>

@@ -85,11 +85,9 @@
         <br>
         <div class="result_kekka_p"><p>結果: <%= resultStr %></p></div>
         <br>
-        <br>
         <P>～今の勝敗は～</P>
-       <p>あなた：<%= (Integer) request.getSession().getAttribute("playerScore") %>　CPU：<%= (Integer) request.getSession().getAttribute("cpuScore") %></p>
-       <br>
-       <br>
+        <p>あなた：<%= (Integer) request.getSession().getAttribute("playerScore") %>　CPU：<%= (Integer) request.getSession().getAttribute("cpuScore") %></p>
+        <br>
        <%-- 勝負が決まっていない場合は再度じゃんけんをする --%>
        <div class="label"><label for="hand">↓↓あなたの手を選んでください↓↓</label></div>
     
@@ -103,16 +101,13 @@
                 <img src="/janken/janken_pa.png" alt="pa" class="img_result" width="45px" height="45px">
            
             </div>
-           <div class="janken_buttom"><input type="submit" value="じゃんけんする"></div>
+           <div class="janken_buttom"><input class="button" type="submit" value="じゃんけんする"></div>
         </form>
           
          <% System.out.println("じゃんけんに到達"); %>
          
    <jsp:include page="footer.jsp"/>
-   
-
    </div>
    </div>
-   
 </body>
 </html>
