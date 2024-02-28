@@ -247,13 +247,13 @@ public class JankenServlet extends HttpServlet {
      
     // 試合判定のためのメソッド定義
     public static int judge(int playerHand, int cpuHand) {
-    	  if (playerHand == cpuHand) {
-    	    return 0; //引き分け
-    	  } else if ((playerHand + 1) % 3 == cpuHand) {
-    	    return 1; //プレイヤーの勝ち
-    	  } else {
-    	    return 2; //cpuの勝ち
-    	  }
+    	if (playerHand == cpuHand) {
+            return 0; // あいこ
+        } else if ((playerHand == 1 && cpuHand == 2) || (playerHand == 2 && cpuHand == 3) || (playerHand == 3 && cpuHand == 1)) {
+            return 1; // 勝ち
+        } else {
+            return 2; // 負け
+        }
     	}
     // プレイヤースコアをセッションスコープに保存するためのメソッド
     private static int getPlayerScore(HttpServletRequest request) {
